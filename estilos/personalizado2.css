@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Emilys+Candy&family=Jersey+25&family=Marmelad&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ribeye&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --cor1:#ffffff;
+    --cor2:#C8E6C9;
+    --cor3:#35973a;
+    --cor6:#6db470;
+    --cor4:#121212;
+    --cor5:#A5D6A7;
+    --cor7:#e6e3e3bd;
+}
+[data-theme="dark"]{
+    --cor1:#E8F5E9;
+    --cor2:#C8E6C9;
+    --cor3:#326435;
+    --cor6:#234726;
+    --cor4:#121212;
+    --cor5:#A5D6A7;
+    --cor7:#adccad6b;
+}
+body{
+    background:linear-gradient(to bottom, var(--cor3), var(--cor6));
+    min-height: 100vh;
+   
+}
+
+header{
+    background-color:var(--cor7);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 5px 15px;
+    padding-left: 40px;
+    }
+    .logo{
+        font-size: 30px;
+        font-family: 'Jersey 25', sans-serif;;
+        font-weight: normal;
+        color:var(--cor4);
+        
+    }
+    .card{
+        background-color: var(--cor7);
+        color: var(--cor1);
+    }
+    
+    header > p{
+        font-weight: 200px;
+        font-size: 20px;
+        color:var(--cor4);
+        padding: 0px;
+        margin: 0px;
+        padding-bottom: 10px;
+    }
+    h2{
+        color: var(--cor4);
+    }
+    ul{
+        color: var(--cor4);
+    }
+     nav>a{
+        color:var(--cor4);
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 20px;
+        font-family: "Jersey 25", sans-serif;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+     .card a:hover{
+        text-decoration: underline;
+        color: #52CB49;
+      
+    }
+    .menu{
+        display: flex;
+        gap: 30px;
+    }
+
+    h1{
+        text-align: center;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: var(--cor4);
+        padding-top: 20px;
+    }
+    p{
+        color: var(--cor4);
+    }
+    h3{
+        color: var(--cor4);
+    }
+    a{
+        color: var(--cor4);
+    }
+    .pergunta{
+        color: var(--cor4);
+    }
+    .habilidade{
+        color: var(--cor4);
+    }
+    .imgcss{
+        width: 300px;
+        height: 200px;
+        padding-top: 20px;
+        border-radius: 10px;
+    }
+    div#html{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        
+    }
+    .imgcss img{
+        width: 100%;
+        height: auto;
+        box-shadow: 2px 2px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .back{
+        width: 300px;
+        height: 200px;
+        padding-top: 20px;
+        border-radius: 10px;
+    }
+    .back img{
+        width: 100%;
+        height: auto;
+        box-shadow: 2px 2px solid rgba(0, 0, 0, 0.5);
+    }
+    .mobile{
+        width: 300px;
+        height: 200px;
+        padding-top: 20px;
+        border-radius: 10px;
+    }
+    .mobile img{
+        width: 100%;
+        height: auto;
+        box-shadow: 2px 2px solid rgba(0, 0, 0, 0.5);
+    }
+    
+@media (max-width:600px) {
+    
+    header{
+        flex-direction: column;
+        align-items:flex-start;
+        background: 100%;
+        background-color:var(--cor7) ;
+    }
+   
+
+.menu{
+    display: block;
+}
+
+}
+h2{
+    color: var(--cor4);
+    padding-top:10px ;
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: normal;
+    margin: 5px;
+}
+
+p{
+    text-align: justify;
+}
+
+.pergunta{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.card {
+    background-color:var(--cor7) ;
+    border: 0.5px solid #0412071d;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    color: white;
+    font-family: 'marmelad', sans-serif;
+    font-weight: normal;
+    max-width: 800px;
+    min-width: 100px;
+    margin: 20px auto;
+}
+.habilidade{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card ul{
+    margin-left: 20px;
+}
+
+.card:hover{
+    transform: scale(1.03); /*aumenta o tamanho do conteudo em 30%*/
+}
+
+.pergunta{
+    display: block;
+    padding: 5px;
+}
+
+a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding-top: 10px;
+}
+
+a:hover{
+    color: var(--cor5);
+    text-decoration: underline;
+}
+
+footer p {
+    background-color:var(--cor7);
+    color: var(--cor4);
+    text-align: center;
+    display: block;
+    padding: 20px;
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: normal;
+}
+
+@media  (max-width:600px) {
+    .card{
+        max-width: 400px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+}
