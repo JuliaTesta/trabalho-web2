@@ -13,16 +13,16 @@
     --cor6:#6db470;
     --cor4:#121212;
     --cor5:#A5D6A7;
-    --cor7:#e6e3e3bd;
+    --cor7:#cdf5cd7c;
 }
 [data-theme="dark"]{
     --cor1:#E8F5E9;
     --cor2:#C8E6C9;
     --cor3:#326435;
     --cor6:#234726;
-    --cor4:#121212;
+    --cor4:white;
     --cor5:#A5D6A7;
-    --cor7:#adccad6b;
+    --cor7:#96b99667;
 }
 body{
     background:linear-gradient(to bottom, var(--cor3), var(--cor6));
