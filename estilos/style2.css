@@ -48,7 +48,7 @@ header {
     color: var(--cor4);
 }
 
-nav a {
+nav > ul > li > a {
     color: var(--cor4);
     text-decoration: none;
     font-family: 'Jersey 25', sans-serif;
@@ -110,6 +110,14 @@ footer {
 
     main {
         padding: 20px;
+    }
+    
+    a{
+        color: var(--cor4);
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        padding-top: 10px;
     }
 
     .botoes a {

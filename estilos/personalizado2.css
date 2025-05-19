@@ -64,7 +64,7 @@ header{
     ul{
         color: var(--cor4);
     }
-     nav>a{
+     nav>ul>li>a{
         color:var(--cor4);
         text-decoration: none;
         font-weight: normal;
@@ -213,7 +213,7 @@ p{
 }
 
 a{
-    color: white;
+    color: var(--cor4);
     text-align: center;
     text-decoration: none;
     display: block;

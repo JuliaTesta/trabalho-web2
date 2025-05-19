@@ -47,19 +47,17 @@ header {
     font-family: 'Jersey 25', sans-serif;
 }
 
-.menu {
-    display: flex;
-    gap: 30px;
-}
-
-nav a {
+nav > ul > li > a {
     color: var(--cor4);
     text-decoration: none;
     font-family: 'Jersey 25', sans-serif;
     font-size: 20px;
-    padding: 10px;
+    padding: 15px 25px;
 }
-
+.menu {
+    display: flex;
+    gap: 50px;
+}
 nav a:hover {
     color: var(--cor5);
     text-decoration: underline;
@@ -154,6 +152,13 @@ footer {
 
     main {
         padding: 20px;
+    }
+    a{
+        color:var(--cor4);
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        padding-top: 10px;
     }
 
     .botoes a {

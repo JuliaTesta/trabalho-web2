@@ -68,7 +68,7 @@ button:hover{
 }
 .imagem{
     display: flex;
-    justify-content: center;
+    justify-content: center; /*alinha horizontalmente os elementos filhos*/
 }
 .imagem img{
     max-width: 300px;
