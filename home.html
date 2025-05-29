@@ -11,7 +11,10 @@
 
   
 </head>
-<body onresize="mudouTamanho()">
+<body>
+
+  <section class="barra">
+  </section>
 
 <header>
   <div class="logo">AnáliseTech</div>
@@ -19,17 +22,34 @@
   <nav class="menu" id="itens">
     
     <ul>
+
+      
       <li><a href="index.html">Página Inicial</a></li>
       <li><a href="home.html">Sobre o Curso</a></li>
       <li><a href="home2.html">Grade Horária</a></li>
       <li><a href="areas.html">Oportunidades</a></li>
-      
+      <li>
+        <input type="text" placeholder="Pesquisar..." class="search-bar" id="search">
+        <button class="search-button" id="search-button">🔍</button>
+      </li>
+     
     </ul>
   </nav>
 </header>
 
+
+<section class="conteudo1">
+  <h2 class="oi">Sobre o Curso</h2>
+
+  <img src="./imagens/Programming-bro.png" alt="" class="oii">
+
+</section>
+
 <main>
-  <section class="conteudo">
+  
+  
+
+  <section class="conteudo" id="conteudo">
     <h2>Curso de ADS - 1º Semestre</h2>
     <p>  Este curso faz parte do primeiro semestre do curso de Análise e Desenvolvimento de Sistemas (ADS) do Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - Campus Hortolândia. O objetivo é proporcionar aos alunos uma base sólida nos princípios da programação, engenharia de software, bancos de dados, redes de computadores e desenvolvimento web. As disciplinas são pensadas para preparar o estudante para atuar no mercado de tecnologia da informação, com uma formação prática e teórica de qualidade. Além disso, os alunos desenvolvem projetos que integram teoria e prática, reforçando habilidades essenciais para o mercado de trabalho.</p>
 
@@ -41,7 +61,7 @@
     </div>
   </section>
 
-  <section id="campus">
+  <section id="campus" id="campus">
     <h2>Sobre o Campus Hortolândia</h2>
     <p>O IFSP Hortolândia foi inaugurado em 2007 e tem como objetivo expandir o acesso ao ensino técnico e superior gratuito e de qualidade. O campus é reconhecido pela excelência em cursos voltados para áreas de tecnologia, gestão e educação.</p>
     <p>Entre os cursos ofertados estão: Técnico em Informática, Técnico em Administração, Bacharelado em Engenharia de Controle e Automação, Licenciatura em Matemática, e o Tecnólogo em Análise e Desenvolvimento de Sistemas.</p>
@@ -59,25 +79,8 @@
   <p id="footer">© 2025 - IFSP Hortolândia - Curso de ADS</p>
 </footer>
 
-<script>
-  function mudouTamanho(){
-      if(window.innerWidth >= 768){
-          itens.style.display = 'block'
-      }
-      else{
-          itens.style.display='none'
-      }
-  }
-  function clickMenu(){
-      let itens = document.getElementById('itens')
-
-      if(itens.style.display == 'block'){
-          itens.style.display = 'none'
-      }
-      else{
-          itens.style.display = 'block'
-      }
-  }
+<script src="pesquisa.js">
+  
 </script>
 
 

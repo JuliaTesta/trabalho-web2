@@ -11,91 +11,122 @@
 
     
 </head>
-<body onresize="mudouTamanho()">
+<body>
 
-    <header>
-        <div class="logo">AnáliseTech</div>
-        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">Menu</span>
-        <nav class="menu" id="itens">
+    <section class="barra">
+    </section>
+  
+  <header>
+    <div class="logo">AnáliseTech</div>
+    <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">Menu</span>
+    <nav class="menu" id="itens">
+      
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="home.html">Sobre o Curso</a></li>
+        <li><a href="home2.html">Grade Horária</a></li>
+        <li><a href="areas.html">Oportunidades</a></li>
+        <li><input type="text" placeholder="Pesquisar..." class="search-bar" id="search">
+          <button class="search-button"  id="search-button">🔍</button></li>
+       
+      </ul>
+    </nav>
+  </header>
+  
 
-            <ul>
-                <li><a  href="index.html">Página Inicial</a></li>
-                <li><a  href="home.html">Sobre o Curso</a></li>
-                <li><a  href="home2.html">Grade Horária</a></li>
-                <li><a  href="areas.html">Oportunidades</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <h1>Áreas de Atuação</h1>
+  <section class="conteudo1">
+    <h2 class="oi">Áreas de Atuação</h2>
+  
+    <img src="./imagens/Programming-bro.png" alt="" class="oii">
+  
+  </section>
+    
 
     <main>
-        <div class="card">
-            <h2>Desenvolvedor front-end:</h2>
-            <p>
-                <strong class="pergunta">Você já se perguntou quem transforma o design de um site em algo que você realmente pode clicar, navegar e interagir?</strong><br>
-                Esse é o papel do <strong>desenvolvedor front-end</strong>. Ele é responsável por colocar em prática, por meio dos códigos, o design de um site ou interface, através de linguagens como:<strong> HTML, CSS e JavaScript</strong>. Ele cuida de  toda<strong> parte iterativa e visual</strong> do sistema. Além disso, é possível  com que o  front-end se comunique com o back-end (parte lógica e de dados)  trazendo feedbacks. Por exemplo, ao clicar em um botão “enviar” o Front-end envia dados para o servidor e avisa ao usuário se deu tudo certo. Legal, né?
+        <section class="area zigzag">
 
-                <br><strong class="habilidade">Habilidades necessárias-</strong><br>
-                <ul>
-                    <li>Conhecimento nas principais linguagens usadas nessa área: HTML, CSS e JavaScript.</li>
-                    <li>Noções de responsividade</li>
-                    <li>Noções de acessibilidade</li>
-                </ul>
+            <div class="img-container">
+                <img class="imgcss" src="./imagens/htmlcss.jpg" alt="Desenvolvedor Front-end">
+              </div>
+
+            <div class="text-container">
+                <h2>Desenvolvedor front-end:</h2>
+                <p>
+                    <strong class="pergunta">Você já se perguntou quem transforma o design de um site em algo que você realmente pode clicar, navegar e interagir?</strong><br>
+                    Esse é o papel do <strong>desenvolvedor front-end</strong>. Ele é responsável por colocar em prática, por meio dos códigos, o design de um site ou interface, através de linguagens como:<strong> HTML, CSS e JavaScript</strong>. Ele cuida de  toda<strong> parte iterativa e visual</strong> do sistema. Além disso, é possível  com que o  front-end se comunique com o back-end (parte lógica e de dados)  trazendo feedbacks. Por exemplo, ao clicar em um botão “enviar” o Front-end envia dados para o servidor e avisa ao usuário se deu tudo certo. Legal, né?
+                    <br><strong class="habilidade">Habilidades necessárias-</strong><br>
+                    <ul class="lista">
+                        <li>Conhecimento nas principais linguagens usadas nessa área: HTML, CSS e JavaScript.</li>
+                        <li>Noções de responsividade</li>
+                        <li>Noções de acessibilidade</li>
+                    </ul>
+                        <p>
+                            <br><strong>Faixa Salarial-</strong><br>
+            
+                            Aproximadamente <strong>R$3.400 (dev. junior)</strong> a <strong>R$10.00
+                                (dev. sênior)</strong> <br>
+                        </p>
+            
+                </p>
+            </div>
+        </section>
+       
+        <section class="area zigzag">
+
+            <div class="img-container">
+                <img class="back" src="./imagens/back.webp" alt="Desenvolvedor Back-end">
+              </div>
+
+            <div class="text-container">
+                <h2>Desenvolvedor Back-end:</h2>
+                <p>
+                    <strong class="pergunta">Já pensou em como os dados são processados e armazenados quando você preenche um formulário ou faz login em um site?</strong><br>
+                    Por trás de cada clique, está o <strong>desenvolvedor back-end</strong>. Ele é responsável pela <strong>parte lógica</strong>, bem como pelo processamento de dados e interação com servidores. Esse profissional se concentra na parte do sistema que fica nos “bastidores”- ou seja, em tudo que o usuário não vê diretamente.
+                    <br><strong class="habilidade">Habilidades necessárias-</strong><br>
+                    <ul class="lista">
+                        <li>Garantir a segurança do sistema</li>
+                        <li>Conhecimento aprofundado em pelo menos uma linguagem de programação</li>
+                        <li>Otimizar o desempenho do software</li>
+                        <li>Depurar e corrigir bugs do sistema</li>
+                        <li>Manter uma comunicação eficiente entre o back e o front-end</li>
+                    </ul>
                     <p>
                         <br><strong>Faixa Salarial-</strong><br>
-                                    
-                                        Aproximadamente <strong>R$3.400 (dev. junior)</strong> a <strong>R$10.000 (dev. sênior)</strong> <br>
+                        Aproximadamente<strong> R$4.500 a R$8.000</strong> para desenvolvedores back-end <strong>júnior</strong> e <strong>R$8.000 a R$15.000</strong> para<strong> sêniores</strong>. <br>
                     </p>
-
-                <div id="html"><img class="imgcss" src="./imagens/htmlcss.jpg" alt="html css"></div>
-            </p>
-        </div>
-       
-        <div class="card">
-            <h2>Desenvolvedor Back-end:</h2>
-            <p>
-                <strong class="pergunta">Já pensou em como os dados são processados e armazenados quando você preenche um formulário ou faz login em um site?</strong><br>
-                Por trás de cada clique, está o <strong>desenvolvedor back-end</strong>. Ele é responsável pela <strong>parte lógica</strong>, bem como pelo processamento de dados e interação com servidores. Esse profissional se concentra na parte do sistema que fica nos “bastidores”- ou seja, em tudo que o usuário não vê diretamente.
-                <br><strong class="habilidade">Habilidades necessárias-</strong><br>
-                <ul>
-                    <li>Garantir a segurança do sistema</li>
-                    <li>Conhecimento aprofundado em pelo menos uma linguagem de programação</li>
-                    <li>Otimizar o desempenho do software</li>
-                    <li>Depurar e corrigir bugs do sistema</li>
-                    <li>Manter uma comunicação eficiente entre o back e o front-end</li>
-                </ul>
-                <p>
-                    <br><strong>Faixa Salarial-</strong><br>
-                    Aproximadamente<strong> R$4.500 a R$8.000</strong> para desenvolvedores back-end <strong>júnior</strong> e <strong>R$8.000 a R$15.000</strong> para<strong> sêniores</strong>. <br>
-                </p>
-
-                <div id="html"><img class="back" src="./imagens/back.webp" alt="back-end"></div>
-            </p>
-        </div>
-       
-        <div class="card">
-            <h2>Desenvolvedor Mobile:</h2>
             
-            <p>
-                <strong class="pergunta">Você curte apps como Instagram, iFood ou TikTok? Já pensou em quem cria essas experiências que cabem na palma da mão?</strong><br>
-                O <strong>desenvolvedor mobile</strong> é o profissional responsável pela <strong>criação </strong>e <strong>manutenção</strong> de aplicativos para dispositivos móveis, como smartphones e tablets. Essa área de empregabilidade está em alta. Segundo dados do Governo Federal, o uso de celulares está presente em 99,5% dos domicílios com acesso à internet!
-                <br><strong class="habilidade">Habilidades Necessárias-</strong><br>
-                <ul>
-                    <li>Conhecimento em design de interfaces, arquitetura de software e segurança digital</li>
-                    <li>Domínio das ferramentas de desenvolvimento</li>
-                    <li>Conhecimento em linguagens de programação</li>
-                </ul>
-               <p>
-                   <br> <strong>Faixa Salarial-</strong><br>
-                    Aproximadamente <strong>R$3.215,00</strong> para desenvolvedores <strong>junior</strong> e para profissionais <strong>sêniores</strong>, a média salarial é de <strong>R$10.963,00.</strong> <br>
-               </p>
-                <div id="html"><img class="mobile" src="./imagens/mobile.jpg" alt="mobile"></div>
-            </p>
-        </div>
+                </p>
+            </div>
+        </section>
+       
+        <section class="area zigzag">
+
+            <div class="img-container">
+                <img class="mobile" src="./imagens/mobile.jpg" alt="Desenvolvedor Mobile">
+            </div>
+            
+            <div class="text-container">
+                <h2>Desenvolvedor Mobile:</h2>
+            
+                <p>
+                    <strong class="pergunta">Você curte apps como Instagram, iFood ou TikTok? Já pensou em quem cria essas experiências que cabem na palma da mão?</strong><br>
+                    O <strong>desenvolvedor mobile</strong> é o profissional responsável pela <strong>criação </strong>e <strong>manutenção</strong> de aplicativos para dispositivos móveis, como smartphones e tablets. Essa área de empregabilidade está em alta. Segundo dados do Governo Federal, o uso de celulares está presente em 99,5% dos domicílios com acesso à internet!
+                    <br><strong class="habilidade">Habilidades Necessárias-</strong><br>
+                    <ul class="lista">
+                        <li>Conhecimento em design de interfaces, arquitetura de software e segurança digital</li>
+                        <li>Domínio das ferramentas de desenvolvimento</li>
+                        <li>Conhecimento em linguagens de programação</li>
+                    </ul>
+                   <p>
+                       <br> <strong>Faixa Salarial-</strong><br>
+                        Aproximadamente <strong>R$3.215,00</strong> para desenvolvedores <strong>junior</strong> e para profissionais <strong>sêniores</strong>, a média salarial é de <strong>R$10.963,00.</strong> <br>
+                   </p>
+            
+                </p>
+            </div>
+        </section>
     
-        <div class="card">
+        <div class="card-rodape">
             <h3 style="text-align: center;">Pronto para iniciar sua carreira?</h3><br>
             <p style="text-align: center;">Explore mais sobre as <strong class="oportunidade">oportunidades em tecnologia</strong>:</p>
             <a  target="_blank" href="https://br.linkedin.com/jobs/an%C3%A1lise-e-desenvolvimento-de-sistemas-vagas?position=1&pageNum=0">linkedin.com</a>
@@ -104,30 +135,11 @@
     </main>
 
     <footer>
-        <p>Site criado por Julia Matos, Julia Modesto, Isabela e Phoebe</p>
+        <p>Site criado por Julia, Isabella e Phoebe</p>
     </footer>
 
-    <script>
-        function mudouTamanho(){
-            if(window.innerWidth >= 768){
-                itens.style.display = 'block'
-            }
-            else{
-                itens.style.display='none'
-            }
-        }
-        function clickMenu(){
-            let itens = document.getElementById('itens')
-
-            if(itens.style.display == 'block'){
-                itens.style.display = 'none'
-            }
-            else{
-                itens.style.display = 'block'
-            }
-        }
-    </script>
-
+    <script src="pesquisa.js"></script>
     <script src="myscript.js"></script>
+    
 </body>
 </html>

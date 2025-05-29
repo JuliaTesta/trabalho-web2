@@ -3,21 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ADS</title>
+    <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./estilos/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="conteudo">
+
+    <section class="barra">
+    </section>
+  
+  <header>
+    <div class="logo">AnáliseTech</div>
+   
+    <nav class="menu" id="itens">
+      
+      <ul >
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="home.html">Sobre o Curso</a></li>
+        <li><a href="home2.html">Grade Horária</a></li>
+        <li><a href="areas.html">Oportunidades</a></li>
+        <li>
+          <input type="text" placeholder="Pesquisar..." class="search-bar" id="search">
+          <button class="search-button" id="search-button">🔍</button>
+        </li>
+       
+      </ul>
+    </nav>
+  </header>
+  
+    <section class="topo-titulo">
         
         <h1>Análise e Desenvolvimento de Sistemas</h1>
         <p>Tecnólogo focado em programação, banco de dados e desenvolvimento de software</p>
-        <div class="imagem"><img src="./imagens/Programming-bro.png" alt=""></div>
-        <button id="botao"><a href="home.html">Saiba mais</a></button>
         <div class="tema-botao"><button id="mudar">Tema</button></div>
        
     </section>
+
+    <section class="parallax"></section>
+
+    <section class="containers">
+        <h2>Linguagens de Programação</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                <h3>Python</h3>
+                <a href="https://www.python.org/about/" target="_blank">Saiba mais</a>
+            </div>
+            
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
+                <h3>Java</h3>
+                <a href="https://www.java.com/pt-BR/" target="_blank">Saiba mais</a>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C">
+                <h3>C</h3>
+                <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>© 2025 AnáliseTech - Todos os direitos reservados</p>
+    </footer>
+
     
     <script src="myscript.js"></script>
+    <script src="pesquisa.js"></script>
+    
 </body>
 </html>

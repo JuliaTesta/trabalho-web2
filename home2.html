@@ -11,27 +11,37 @@
 
    
 </head>
-<body  onresize="mudouTamanho()">
+<body>
 
-    <header>
-        <div class="logo">AnáliseTech</div>
-        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">Menu</span>
-        <nav class="menu" id="itens">
+  <section class="barra">
+  </section>
 
-            <ul>
-              <li><a  href="index.html">Página Inicial</a></li>
-              <li><a  href="home.html">Sobre o Curso</a></li>
-              <li><a  href="home2.html">Grade Horária</a></li>
-              <li><a  href="areas.html">Oportunidades</a></li>
-            </ul>
-        </nav>
+<header>
+  <div class="logo">AnáliseTech</div>
+  <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">Menu</span>
+  <nav class="menu" id="itens">
+    
+    <ul>
 
-      </header>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="home.html">Sobre o Curso</a></li>
+      <li><a href="home2.html">Grade Horária</a></li>
+      <li><a href="areas.html">Oportunidades</a></li>
+      <li><input type="text" placeholder="Pesquisar..." class="search-bar" id="search">
+        <button class="search-button"  id="search-button">🔍</button></li>
+     
+    </ul>
+  </nav>
+</header>
 
-      <h1>Grade Curricular IFSP- Análise e Desenvolvimento de Sistemas</h1>
+<section class="conteudo1">
+  <h2 class="oi">Grade Horária</h2>
+
+  <img src="./imagens/Programming-bro.png" alt="" class="oii">
+
+</section>
   
-  </body>
-  </html>
+  
       <table border="1" cellpadding="5" cellspacing="0">
           <thead>
             <tr>
@@ -117,31 +127,18 @@
             </tr>
           </tbody>
         </table>
+
         <footer>
           <p>IFSP - 2025</p>
       </footer>
 
-
-      <script>
-        function mudouTamanho(){
-            if(window.innerWidth >= 768){
-                itens.style.display = 'block'
-            }
-            else{
-                itens.style.display='none'
-            }
-        }
-        function clickMenu(){
-            let itens = document.getElementById('itens')
-      
-            if(itens.style.display == 'block'){
-                itens.style.display = 'none'
-            }
-            else{
-                itens.style.display = 'block'
-            }
-        }
-      </script>
+      <script src="pesquisa.js"></script>
       <script src="myscript.js"></script>
-  </body>
-  </html>
+
+    </body>
+    </html>
+
+
+      
+     
+  
