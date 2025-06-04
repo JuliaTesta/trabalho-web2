@@ -219,17 +219,13 @@ h3{
     background-color: var(--cor6);
 }
 
-footer{
-    background-color: var(--cor4);
-    color: var(--cor1);
-    padding: 15px 10px;
-
+footer {
+    background-color: #000;
+    color: white; 
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
-}
-
-footer p{
-    margin-bottom: 10px;
-    font-size: 0.9em;
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

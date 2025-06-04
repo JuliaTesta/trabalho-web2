@@ -272,12 +272,13 @@ h2{
    padding: 20px;
 }
 
-footer p {
-    background-color:var(--cor7);
-    color: var(--cor4);
+footer {
+    background-color: #000;
+    color: white;
     text-align: center;
-    display: block;
-    padding: 20px;
-    font-family: 'Jersey 25', sans-serif;
-    font-weight: normal;
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

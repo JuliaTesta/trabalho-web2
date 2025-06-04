@@ -6,23 +6,24 @@
     box-sizing: border-box;
 }
 
-:root{
-    --cor1:#ffffff;
-    --cor2:#C8E6C9;
-    --cor3:#35973a;
-    --cor6:#6db470;
-    --cor4:#121212;
-    --cor5:#A5D6A7;
-    --cor7:#cdf5cd7c;
+:root {
+    --cor1: #ffffff;
+    --cor2: #C8E6C9;
+    --cor3: #35973a;
+    --cor6: #6db470;
+    --cor4: #121212;
+    --cor5: #A5D6A7;
+    --cor7: #cdf5cd7c;
 }
-[data-theme="dark"]{
-    --cor1:#E8F5E9;
-    --cor2:#C8E6C9;
-    --cor3:#326435;
-    --cor6:#234726;
-    --cor4:white;
-    --cor5:#A5D6A7;
-    --cor7:#96b99667;
+
+[data-theme="dark"] {
+    --cor1: #E8F5E9;
+    --cor2: #C8E6C9;
+    --cor3: #326435;
+    --cor6: #234726;
+    --cor4: white;
+    --cor5: #A5D6A7;
+    --cor7: #96b99667;
 }
 
 body {
@@ -34,11 +35,9 @@ body {
     flex-direction: column;
 }
 
-.barra{
+.barra {
     background-color: rgb(35, 64, 1);
-    display: flex;
     height: 50px;
-
 }
 
 header {
@@ -49,40 +48,17 @@ header {
     align-items: center;
 }
 
-.search-bar {
-    width: 300px;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 25px 0 0 25px;
-    outline: none;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-  
-.search-bar:focus {
-    border-color: #000000; /* Cor ao focar */
-}
-  
-  /* Botão de pesquisa */
-.search-button {
-    padding: 10px 15px;
-    border: none;
-    background-color: rgb(35, 64, 1);
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 0 25px 25px 0;
-    transition: background-color 0.3s ease;
-}
-  
-.search-button:hover {
-    background-color: rgb(35, 64, 1);
-}
-
 .logo {
     color: black;
     font-size: 30px;
     font-family: 'Jersey 25', sans-serif;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 nav > ul > li > a {
@@ -93,14 +69,26 @@ nav > ul > li > a {
     padding: 15px 25px;
 }
 
-.menu {
-    display: flex;
-    gap: 50px;
-}
-
 nav a:hover {
     color: white;
     background-color: rgb(35, 64, 1);
+}
+
+.search-bar {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: rgb(35, 64, 1);
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
 }
 
 main {
@@ -108,34 +96,34 @@ main {
     padding: 30px 50px;
 }
 
-.conteudo1{
-    margin: 30px auto 30px auto;
+.conteudo1 {
+    margin: 30px auto;
     max-width: 2000px;
-    border-radius: 15px;
     width: 100%;
-    background:var(--cor7);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cor7);
+    border-radius: 15px;
     padding: 20px;
-    box-sizing: border-box;
-
 }
 
-.oii{
-    width: 600px;
-    height: 600px;
-    width: 30%;
-    
-}
-
-.oi{
-    padding-left: 400px;
-    margin-top: 250px;
-    width: 60%;
+.oi {
     font-size: 100px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--cor4);
+    width: 60%;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.oii {
+    width: 30%;
+    max-width: 600px;
 }
 
 .conteudo, #campus {
-    background:var(--cor7);
+    background: var(--cor7);
     margin-bottom: 30px;
     padding: 25px;
     border-radius: 15px;
@@ -152,12 +140,25 @@ p {
     color: var(--cor4);
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 20px;
     text-align: justify;
+    margin-bottom: 20px;
 }
 
-#footer{
-    text-align: center;
+.imagem-faculdade, .imagem-faculdade1 {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+}
+
+.imagem-faculdade {
+    width: 100%;
+    max-width: 600px;
+}
+
+.imagem-faculdade1 {
+    width: 100%;
+    max-width: 300px;
 }
 
 .botoes {
@@ -166,93 +167,84 @@ p {
 
 .botoes a {
     display: inline-block;
-    background-color: var(--cor2);
+    background-color: var(--cor3);
     padding: 10px 20px;
     border-radius: 10px;
     font-family: 'Jersey 25', sans-serif;
     font-size: 18px;
-    color:var(--cor4);
+    color: var(--cor4);
     text-decoration: none;
     margin-right: 15px;
 }
 
 .botoes a:hover {
-    background-color: var(--cor1);
+    background-color: var(--cor6);
     color: black;
 }
 
-.imagem-faculdade {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0 0 20px black;
+footer {
+    background-color: #000; 
+    color: white; 
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .conteudo1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .oi {
+        font-size: 50px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .oii {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar, .search-button {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.box-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.texto-conteudo {
+    flex: 1 1 400px;
 }
 
 .imagem-faculdade1 {
-    display: block;
-    width: 100%;
+    flex: 1 1 250px;
     max-width: 300px;
-    margin: 20px auto;
+    height: auto;
     border-radius: 15px;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-footer {
-    background-color: var(--cor7);
-    text-align: center;
-    padding: 15px 0;
-    font-size: 16px;
-}
-
-
-.highlight {
+mark.highlight {
     background-color: yellow;
-    font-weight: bold;
-  }
-  
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    main {
-        padding: 20px;
-    }
-    
-    a{
-        color:var(--cor4);
-        text-align: center;
-        text-decoration: none;
-        display: block;
-        padding-top: 10px;
-    }
-
-    .botoes a {
-        margin-bottom: 10px;
-    }
-
-    .search-button{
-        color:var(--cor4);
-        text-align: center;
-        text-decoration: none;
-        display: block;
-        padding-top: 10px;
-    }
-
-    .search-bar{
-        color:var(--cor4);
-        text-align: center;
-        text-decoration: none;
-        display: block;
-        padding-top: 10px;
-    }
+    color: black;
+    padding: 2px 4px;
+    border-radius: 4px;
 }

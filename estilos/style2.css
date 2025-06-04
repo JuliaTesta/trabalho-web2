@@ -170,11 +170,14 @@ p {
 }
 
 footer {
-    background-color: var(--cor7);
+    background-color: #000; 
+    color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0;
     font-size: 16px;
-    color: var(--cor4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu{
