@@ -1,7 +1,8 @@
-let mudar = document.getElementById('mudar')                       //localiza no html o botao com id mudar
-let themeSystem = localStorage.getItem('themeSystem') || 'dark'      //verifica se ja existe um tema salvo no navegador.
+let mudar = document.getElementById('mudar')                         //localiza no html o botao com id mudar
 
-mudarTema(themeSystem);                                                //aplica o tema atual que esta no localstorage
+let themeSystem = localStorage.getItem('themeSystem') || 'dark'      //verifica se ja existe um tema salvo no navegador.
+mudarTema(themeSystem);                                              //aplica o tema atual que esta no localstorage
+
 
 if(mudar){                                                                       //verifica se o botao existe
     mudar.addEventListener('click', () => { 
@@ -20,7 +21,7 @@ if(mudar){                                                                      
     }) 
 }   
 
-   function mudarTema(theme){  
+function mudarTema(theme){  
     document.documentElement.setAttribute('data-theme',theme); 
 }
 

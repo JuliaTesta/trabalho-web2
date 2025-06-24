@@ -12,11 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
       parent.replaceChild(document.createTextNode(mark.textContent), mark);
       parent.normalize();
     });
+    const contadorElement = document.getElementById('contador-ocorrencias');
+    if (contadorElement) {
+      contadorElement.remove();
+    }
   }
 
   function destacarPalavras(termos) {
     if (termos.length === 0) return;
 
+    let totalOcorrencias = 0;
     const walker = document.createTreeWalker(
       document.body,
       NodeFilter.SHOW_TEXT,
@@ -40,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     textNodes.forEach(node => {
       const textoOriginal = node.nodeValue;
-      const textoNormalizado = removerAcentos(textoOriginal).toLowerCase();
+      const textoNormalizado = removerAcentos(textoOriginal.toLowerCase());
 
       let indices = [];
 
@@ -95,7 +100,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       node.parentNode.replaceChild(fragment, node);
+      totalOcorrencias += merged.length;
     });
+
+    // Criar ou atualizar o contador de ocorrências
+    let contadorElement = document.getElementById('contador-ocorrencias');
+    if (!contadorElement) {
+      contadorElement = document.createElement('div');
+      contadorElement.id = 'contador-ocorrencias';
+      contadorElement.style.position = 'fixed';
+      contadorElement.style.color = '#000';
+      contadorElement.style.top = '80px';
+      contadorElement.style.right = '20px';
+      contadorElement.style.padding = '10px';
+      contadorElement.style.backgroundColor = '#fff';
+      contadorElement.style.border = '1px solid #ccc';
+      contadorElement.style.borderRadius = '5px';
+      contadorElement.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+      contadorElement.style.zIndex = '1000';
+      document.body.appendChild(contadorElement);
+    }
+    contadorElement.textContent = `${totalOcorrencias} ocorrência${totalOcorrencias !== 1 ? 's' : ''} encontrada${totalOcorrencias !== 1 ? 's' : ''}`;
   }
 
   searchButton.addEventListener('click', () => {
@@ -111,4 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
       searchButton.click();
     }
   });
+});
+
+// Sobre Menu na versão de celular
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('itens');
+
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('show');
 });

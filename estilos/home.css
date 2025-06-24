@@ -35,58 +35,42 @@ body {
     flex-direction: column;
 }
 
-.barra {
-    background-color: rgb(35, 64, 1);
-    height: 50px;
+@media (max-width: 1000px) {
+    .conteudo1 {
+        flex-direction: column-reverse;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .oi {
+        width: 100%;
+        font-size: 50px;
+        padding-left: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .oii {
+        width: 70%;
+        padding-right: 0;
+        max-width: 300px;
+    }
 }
 
-header {
-    background-color: white;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+@media (max-width: 480px) {
+    .oi {
+        font-size: 40px;
+    }
 
-.logo {
-    color: black;
-    font-size: 30px;
-    font-family: 'Jersey 25', sans-serif;
-}
+    .oii {
+        width: 90%;
+        max-width: 250px;
+    }
 
-nav > ul > li > a {
-    color: black;
-    text-decoration: none;
-    font-family: 'Jersey 25', sans-serif;
-    font-size: 20px;
-    padding: 15px 25px;
-}
-
-.menu {
-    display: flex;
-    gap: 30px;
-}
-
-nav a:hover {
-    color: white;
-    background-color: rgb(35, 64, 1);
-}
-
-.search-bar {
-    width: 300px;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
-}
-
-.search-button {
-    padding: 10px 15px;
-    background-color: rgb(35, 64, 1);
-    color: white;
-    border: none;
-    border-radius: 0 25px 25px 0;
-    cursor: pointer;
+    .conteudo1 {
+        padding: 15px;
+        margin: 15px auto;
+    }
 }
 
 main {
@@ -103,7 +87,7 @@ main {
     align-items: center;
     background: var(--cor7);
     border-radius: 15px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .oi {
@@ -113,11 +97,13 @@ main {
     width: 60%;
     text-align: left;
     padding-left: 40px;
+    text-transform: uppercase;
 }
 
 .oii {
-    width: 30%;
+    width: 40%;
     max-width: 600px;
+    padding-right: 40px;
 }
 
 .conteudo, #campus {
@@ -181,7 +167,7 @@ p {
 }
 
 footer {
-    background-color: #000; 
+    background-color: rgb(35, 64, 1); 
     color: white; 
     text-align: center;
     padding: 20px 0;
@@ -196,27 +182,26 @@ footer {
     .conteudo1 {
         flex-direction: column;
         text-align: center;
+        padding: 20px;
+        margin: 15px auto;
     }
 
     .oi {
-        font-size: 50px;
+        font-size: 60px;
         padding: 0;
         width: 100%;
+        margin-bottom: 30px;
     }
 
     .oii {
-        width: 80%;
+        width: 100%;
         max-width: 400px;
+        padding-right: 0;
     }
 
     nav > ul {
         flex-direction: column;
         gap: 10px;
-    }
-
-    .search-bar, .search-button {
-        width: 100%;
-        border-radius: 10px;
     }
 }
 

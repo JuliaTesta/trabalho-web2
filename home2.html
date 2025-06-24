@@ -5,40 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade-ADS</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="./estilos/style.css">
     <link rel="stylesheet" href="./estilos/style2.css">
-    <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./estilos/media-query.css">
-
-   
+    <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon">   
 </head>
-<body>
 
-  <section class="barra">
-  </section>
+<body>
+    <section class="barra"></section>
 
 <header>
   <div class="logo">AnáliseTech</div>
-  <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">Menu</span>
-  <nav class="menu" id="itens">
-    
-    <ul>
+  
+  <button class="menu-toggle" id="menu-toggle">☰</button>
 
+  <nav class="menu" id="itens">
+    <ul class="nav-list">
       <li><a href="index.html">Página Inicial</a></li>
       <li><a href="home.html">Sobre o Curso</a></li>
       <li><a href="home2.html">Grade Horária</a></li>
       <li><a href="areas.html">Oportunidades</a></li>
-      <li><input type="text" placeholder="Pesquisar..." class="search-bar" id="search">
-        <button class="search-button"  id="search-button">🔍︎</button></li>
-     
+      <li class="search-bar-button">
+        <input type="text" placeholder="Pesquisar..." class="search-bar" id="search">
+        <button class="search-button" id="search-button">🔍︎</button>
+      </li>
     </ul>
   </nav>
 </header>
 
 <section class="conteudo1">
   <h2 class="oi">Grade Horária</h2>
-
-  <img src="./imagens/Programming-bro.png" alt="" class="oii">
-
+  <img src="./imagens/Programming-bro.png" alt="Ilustração Programação" class="oii">
 </section>
   
   
@@ -133,6 +129,7 @@
       </footer>
 
       <script src="pesquisa.js"></script>
+      <script src="menu.js"></script>
       <script src="myscript.js"></script>
 
     </body>

@@ -6,6 +6,13 @@
     padding: 0px;
 }
 
+mark.highlight {
+    background-color: #ffeb3b;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
 :root{
     --cor1:#ffffff;
     --cor2:#C8E6C9;
@@ -23,6 +30,13 @@
     --cor4:#121212;
     --cor5:#A5D6A7;
     --cor7:#96b99667;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Garante que ocupem 100% da largura da viewport */
+    overflow-x: hidden; /* Previne qualquer rolagem horizontal indesejada */
 }
 
 body{
@@ -52,26 +66,108 @@ button:hover{
 a{
     color: var(--cor1);
     text-decoration: none;
+    display: block;
 }
 
 .barra{
     background-color: rgb(35, 64, 1);
     display: flex;
     height: 50px;
-
 }
 
 header {
     background-color: white;
-    padding: 15px 50px;
+    padding: 15px 50px; /* Padding para desktop */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 10; /* Garante que o header fique acima de outros elementos */
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 15px 20px; /* Reduz o padding em telas menores */
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-right: auto; /* Empurra o logo para a esquerda e o toggle para a direita */
+    }
+
+    .search-bar, .search-button {
+        width: 100%; /* Ocupam a largura total em telas pequenas */
+        border-radius: 25px; /* Arredonda tudo */
+        margin-top: 10px; /* Espaçamento entre o campo e o botão */
+    }
+
+    .search-button {
+        margin-top: 0; /* Ajusta o margin para o botão */
+        border-radius: 25px;
+    }
+
+    nav ul li:last-child { /* Seleciona o li que contém a barra de pesquisa e o botão */
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens internos quebrem */
+        width: 100%;
+        margin-top: 10px; /* Espaçamento da navegação */
+    }
+    nav ul li:last-child .search-bar {
+        border-radius: 25px 0 0 25px; /* Restaura o arredondamento original para o campo */
+    }
+    nav ul li:last-child .search-button {
+        border-radius: 0 25px 25px 0; /* Restaura o arredondamento original para o botão */
+    }
+}
+
+/* Ajustes para o menu em telas pequenas */
+@media (max-width: 1000px) {
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: white;
+        padding: 10px 0;
+        /* Adicione uma transição para a abertura/fechamento do menu */
+        transition: max-height 0.3s ease-out; /* Transição para a altura */
+        overflow: hidden; /* Oculta o conteúdo que excede */
+        max-height: 0; /* Inicia com altura zero para a transição */
+    }
+
+    .menu.show {
+        display: flex;
+        max-height: 500px; /* Altura máxima para a transição (ajuste conforme necessário) */
+    }
     
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%; /* Garante que a lista ocupe toda a largura */
+    }
+
+    nav > ul > li {
+        width: 100%; /* Garante que cada item da lista ocupe toda a largura */
+    }
+
+    nav > ul > li > a {
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box; /* Inclui padding e border na largura total */
+    }
+}
+
+.menu-toggle {
+    display: none; /* Escondido por padrão em desktop */
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    z-index: 100; /* Garante que o botão fique acima de tudo */
 }
 
 .search-bar {
-    width: 300px;
+    width: 250px;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 25px 0 0 25px;
@@ -94,16 +190,19 @@ header {
     cursor: pointer;
     border-radius: 0 25px 25px 0;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
   }
   
   .search-button:hover {
-    background-color: rgb(35, 64, 1);
+    background-color: #4a8c14;
   }
 
 .logo {
     color: black;
     font-size: 30px;
     font-family: 'Jersey 25', sans-serif;
+    z-index: 100;
 }
 
 nav > ul > li > a {
@@ -112,14 +211,33 @@ nav > ul > li > a {
     font-family: 'Jersey 25', sans-serif;
     font-size: 20px;
     padding: 15px 25px;
+    transition: background-color 0.3s, color 0.3s;
 }
 .menu {
+    display: flex; /* Visível por padrão em desktop */
+    gap: 30px; /* Espaçamento entre os itens do menu */
+    position: static; /* Posição normal em desktop */
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    max-height: none;
+    overflow: visible;
+    list-style: none;
     display: flex;
-    gap: 50px;
+    flex-direction: row; /* Itens em linha para desktop */
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 nav a:hover {
     color: white;
     background-color: rgb(35, 64, 1);
+}
+
+nav ul li:last-child {
+    display: flex;
+    align-items: center;
+    gap: 0; /* Remove gap entre campo e botão */
 }
 
 nav ul{
@@ -153,9 +271,32 @@ nav ul{
 .parallax{
     background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80');
     height: 350px;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Padrão desktop */
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover; /* Garante que a imagem cubra a área */
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Muda para scroll em telas menores */
+        height: 250px; /* Reduz a altura se necessário */
+    }
+}
+
+@media (max-width: 600px) {
+    .topo-titulo {
+        padding: 20px 10px; /* Reduz padding em telas menores */
+    }
+    .topo-titulo h1 {
+        font-size: 1.8em; /* Ajusta o tamanho da fonte */
+    }
+    .topo-titulo p {
+        font-size: 0.9em;
+    }
+    .containers {
+        padding: 20px 15px; /* Reduz padding lateral */
+    }
 }
 
 .containers{
@@ -174,19 +315,33 @@ h2{
 
 .cards{
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
     justify-content: center;
     gap: 30px;
+    padding: 20px 0; /* Adiciona um pouco de padding vertical */
 }
 
 .card{
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px .4px .4px rgba(0, 0, 0, 0.466);
-    width: 220px;
+    width: 220px; /* Largura base */
+    max-width: 100%; /* Garante que não ultrapasse o contêiner */
     padding: 20px;
     text-align: center;
-
     transition: transform 0.3 ease;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 30px); /* Dois cards por linha com gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%; /* Um card por linha */
+    }
 }
 
 .card:hover{
@@ -220,7 +375,7 @@ h3{
 }
 
 footer {
-    background-color: #000;
+    background-color:  rgb(35, 64, 1);
     color: white; 
     text-align: center;
     padding: 20px 0;
@@ -229,3 +384,67 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+  }
+  
+  /* Menu oculto*/
+  @media (max-width: 1000px) {
+    .menu {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      background-color: white;
+      padding: 10px 0;
+    }
+  
+    .menu.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav > ul > li > a {
+      width: 100%;
+      padding: 10px 20px;
+    }
+  
+    header {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+    }
+
+    .search-bar-button {
+        margin-left: 10%;
+    }
+
+    .search-bar {
+        width: 40%;
+        margin-top: 0;
+    }
+
+    .search-button {
+        width: 40%;
+        margin-top: 0;
+    }
+  }

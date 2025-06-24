@@ -8,26 +8,23 @@
     <link rel="stylesheet" href="./estilos/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
 
-    <section class="barra">
-    </section>
-  
+<body>
+    <section class="barra"></section>
+    
   <header>
     <div class="logo">AnáliseTech</div>
-   
+    <button class="menu-toggle" id="menu-toggle">☰</button>
     <nav class="menu" id="itens">
-      
-      <ul >
+      <ul class="nav-list">
         <li><a href="index.html">Página Inicial</a></li>
         <li><a href="home.html">Sobre o Curso</a></li>
         <li><a href="home2.html">Grade Horária</a></li>
         <li><a href="areas.html">Oportunidades</a></li>
-        <li>
+        <li class="search-bar-button">
           <input type="text" placeholder="Pesquisar..." class="search-bar" id="search">
           <button class="search-button" id="search-button">🔍︎</button>
         </li>
-       
       </ul>
     </nav>
   </header>
@@ -65,15 +62,13 @@
         </div>
     </section>
 
-
-
     <footer>
         <p>© 2025 - IFSP Hortolândia - Curso de ADS</p>
     </footer>
 
-    
-    <script src="myscript.js"></script>
     <script src="pesquisa.js"></script>
+    <script src="menu.js"></script>
+    <script src="myscript.js"></script>
     
 </body>
 </html>
